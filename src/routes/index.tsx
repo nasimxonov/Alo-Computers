@@ -13,4 +13,8 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/:id",
+    element: <h1>detail</h1>,
+  },
 ]);
