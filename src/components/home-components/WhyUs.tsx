@@ -7,7 +7,11 @@ import { Rate } from "antd";
 const WhyUs = () => {
   return (
     <section className="relative mt-[30px] sm:mt-[40px] md:mt-[80px] ">
-      <img className='absolute h-full hidden md:block -left-10 top-10' src={macImg} alt="" />
+      <img
+        className="absolute h-full hidden md:block -left-10 top-10"
+        src={macImg}
+        alt=""
+      />
 
       <h2 className=" text-center mb-10  font-[600]  text-xl sm:text-2xl md:text-3xl ">
         Why Us ?
@@ -56,7 +60,8 @@ const WhyUs = () => {
               <h5 className="font-[500] w-full text-base ">Jack Crash</h5>
             </div>
             <div className="flex justify-end items-end flex-col green-card relative w-full p-5 text-white text-base sm:text-lg md:text-2xl  font-[500]  bg-[#203350] rounded-[0px_38px_0px_68px] ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos modi pariatur fuga non laboriosam laborum cumque eaque itaque vero eum!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos modi
+              pariatur fuga non laboriosam laborum cumque eaque itaque vero eum!
               <div className="rate-star flex items-center gap-2">
                 <Rate className="flex" disabled defaultValue={4} />
                 (10)

@@ -13,10 +13,8 @@ const OurSuggest = () => {
           </h4>
         </div>
 
-        <div
-          className="suggest-bottom   "
-        >
-          {Array.from({ length:5 }).map((_, idx) => (
+        <div className="suggest-bottom   ">
+          {Array.from({ length: 5 }).map((_, idx) => (
             <SuggestCard key={idx} />
           ))}
         </div>

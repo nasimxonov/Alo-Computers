@@ -71,7 +71,6 @@ body {
   user-select: none !important;
 }
 
-
 .ant-input:focus {
   outline: #ff5b00 !important;
 }
@@ -80,8 +79,7 @@ body {
   color: #ff5b00 !important;
 }
 
-
-.ant-input-wrapper{
+.ant-input-wrapper {
   color: #ff5b00 !important;
   height: 48px;
   border: 1px solid #ff5b00;
@@ -93,8 +91,8 @@ body {
   border-radius: 8px !important;
   overflow: hidden !important;
 }
-.ant-input-group   .ant-input{
-    color: #ff5b00 !important;
+.ant-input-group .ant-input {
+  color: #ff5b00 !important;
   height: 48px !important;
   /* border: 1px solid #ff5b00 !important; */
 }

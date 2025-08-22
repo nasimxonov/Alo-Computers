@@ -3,7 +3,6 @@ import { toast } from "react-toastify";
 type notificationType = "login" | "register" | "addlike" | "removeliked";
 
 export const notificationApi = () => {
-
   return function (notifyType: notificationType) {
     switch (notifyType) {
       case "addlike":
@@ -17,5 +16,5 @@ export const notificationApi = () => {
       default:
         break;
     }
-  }
-}
+  };
+};

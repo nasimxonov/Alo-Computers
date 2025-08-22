@@ -17,7 +17,7 @@ interface ModalStoreType {
 export const useAuthStore = create<ModalStoreType>((set) => ({
   user: null,
   setUserData: (data) => {
-    return set({ user:{...data}  });
+    return set({ user: { ...data } });
   },
   signOut: () => set({ user: null }),
 }));

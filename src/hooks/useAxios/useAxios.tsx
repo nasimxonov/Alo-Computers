@@ -14,7 +14,8 @@ export const useAxios = () => {
     return axios({
       url: `${import.meta.env.VITE_BASE_URL}${url}`, // param
       method,
-      params: { // query
+      params: {
+        // query
         ...params,
       },
       headers: {
@@ -22,7 +23,7 @@ export const useAxios = () => {
         ...headers,
       },
       data: body,
-      withCredentials:true
+      withCredentials: true,
     });
   };
 
