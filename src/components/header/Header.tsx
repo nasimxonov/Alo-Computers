@@ -12,9 +12,10 @@ const Header = () => {
   );
   const toggleDrawer = useDrawerStore((state) => state.drawerToggle);
   const user = useAuthStore((state) => state.user) as UserDataType;
-  const toggleProfileDrawer = useModalStore((state) => state.setProfileModalVisiblity);
+  const toggleProfileDrawer = useModalStore(
+    (state) => state.setProfileModalVisiblity
+  );
   return (
-
     <header className="bg-[#1A1A1D] sticky top-0 left-0 z-50 shadow-xl">
       <div className="mc flex items-center justify-between py-5">
         <h1 className="text-xl text-white font-[600] sm:text-2xl md:text-4xl">
@@ -35,7 +36,13 @@ const Header = () => {
 
         <div className="header-right flex items-center gap-5    ">
           {user ? (
-            <Avatar onClick={()=> toggleProfileDrawer()}  className="!bg-[#ff5b00] cursor-pointer font-[600] text-xl md:text-2xl !text-[white]" size="large">{user.firstName.slice(0,1)}</Avatar>
+            <Avatar
+              onClick={() => toggleProfileDrawer()}
+              className="!bg-[#ff5b00] cursor-pointer font-[600] text-xl md:text-2xl !text-[white]"
+              size="large"
+            >
+              {user.firstName.slice(0, 1)}
+            </Avatar>
           ) : (
             <button
               onClick={() => setModalVisibility()}
