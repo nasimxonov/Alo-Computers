@@ -1,6 +1,21 @@
+import { useLoader } from "../../generics/loaders";
+import { useQueryHandler } from "../../hooks/useQueryHandler/useQueryHandler";
 import SuggestCard from "./SuggestCard/SuggestCard";
 
+export interface suggestType {
+  title: string;
+  price: number;
+  imageUrl: string;
+  id: string;
+}
+
 const OurSuggest = () => {
+  const { suggetLoader} = useLoader()
+  const { data, isLoading } = useQueryHandler({
+    url: "/order",
+    pathname: "suggest",
+  });
+  console.log(data?.data, "suggest");
   return (
     <section className="our-suggest mt-[30px] sm:mt-[40px] md:mt-[60px] lg:mt-[88px]">
       <div className="mc w-full md:!w-[70%] flex flex-col gap-2 sm:gap-3 md:gap-14">
@@ -13,9 +28,10 @@ const OurSuggest = () => {
           </h4>
         </div>
 
-        <div className="suggest-bottom   ">
-          {Array.from({ length: 5 }).map((_, idx) => (
-            <SuggestCard key={idx} />
+        <div className="suggest-bottom">
+          {
+            isLoading ? suggetLoader() : data?.data.map((suggest:suggestType) => (
+            <SuggestCard data={suggest}  key={suggest.id} />
           ))}
         </div>
 

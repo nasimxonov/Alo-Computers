@@ -11,7 +11,9 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-
+.showcase{
+  height: calc(100vh - 80px);
+}
 .mybtn {
   box-shadow: 0 0 29px 0 rgba(255, 91, 0, 0.15);
   background-color: #ff5b00;
@@ -71,6 +73,7 @@ body {
   user-select: none !important;
 }
 
+
 .ant-input:focus {
   outline: #ff5b00 !important;
 }
@@ -79,7 +82,8 @@ body {
   color: #ff5b00 !important;
 }
 
-.ant-input-wrapper {
+
+.ant-input-wrapper{
   color: #ff5b00 !important;
   height: 48px;
   border: 1px solid #ff5b00;
@@ -91,8 +95,8 @@ body {
   border-radius: 8px !important;
   overflow: hidden !important;
 }
-.ant-input-group .ant-input {
-  color: #ff5b00 !important;
+.ant-input-group   .ant-input{
+    color: #ff5b00 !important;
   height: 48px !important;
   /* border: 1px solid #ff5b00 !important; */
 }

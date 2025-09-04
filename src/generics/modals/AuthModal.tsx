@@ -3,7 +3,7 @@ import { Input } from "antd";
 import { useState } from "react";
 import { useModalStore } from "../../zustand/modalstore";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
-import { Button } from "antd";
+import { Button  } from "antd";
 import { useQueryMutation } from "../../hooks/useQueryHandler/useQueryActions/useQueryActions";
 
 interface RegisterData {
@@ -34,7 +34,7 @@ const AuthModal = () => {
       messageError: "Ro'yxatdan o'tishda nimadur xato ketdi!",
       messageSucces: "Muvofaqiyatli ro'yxatdan o'tdingiz !",
     });
-
+    
   const { mutate: loginMutation, isPending: loginPending } = useQueryMutation({
     url: "/auth/login",
     method: "POST",
@@ -104,7 +104,7 @@ const AuthModal = () => {
                 className="h-12 text-xl md:text-2xl uppercase  font-[500] active:!bg-[#ad3d00] bg-[#ff5b00] hover:!bg-[#ff5b00]"
                 type="primary"
               >
-                {loginPending ? <Spin /> : "login"}
+                 { loginPending ? <Spin/> :'login' }
               </Button>
             </Form>
           </div>
@@ -144,7 +144,7 @@ const AuthModal = () => {
               <Form.Item name={"phoneNumber"}>
                 <Input
                   className="!h-12 focus:!outline-[#ff5b00]  !text-[#ff5b00] !border-[#ff5b00] !outline-[#ff5b00]"
-                  addonBefore={<span className="!text-[#ff5b00]">+998</span>}
+                  addonBefore={ <span className="!text-[#ff5b00]">+998</span> }
                   suffix=""
                   defaultValue=""
                 />
@@ -155,7 +155,7 @@ const AuthModal = () => {
                 className="h-12 text-xl md:text-2xl uppercase  font-[500] active:!bg-[#ad3d00] bg-[#ff5b00] hover:!bg-[#ff5b00]"
                 type="primary"
               >
-                {registerPending ? <Spin /> : "register"}
+               { registerPending ? <Spin/> :'register' }
               </Button>
             </Form>
           </div>

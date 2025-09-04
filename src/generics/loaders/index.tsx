@@ -14,7 +14,24 @@ export const useLoader = () => {
         ))}
       </>
     );
+
   };
 
-  return { categoriesLoader };
+
+  const suggetLoader = () =>{
+    return <>
+        {Array.from({ length: 5 }).map((_, idx) => (
+          <div key={idx} className="w-full">
+            <Skeleton.Image className="!h-[50%] !w-full" active={true} />
+            <Skeleton.Input active={true} />
+            <Skeleton.Input active={true} />
+            <Skeleton.Button active={true} />
+          </div>
+        ))}
+      </>
+    }
+
+
+
+  return { categoriesLoader , suggetLoader };
 };

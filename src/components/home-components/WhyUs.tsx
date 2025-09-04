@@ -7,11 +7,7 @@ import { Rate } from "antd";
 const WhyUs = () => {
   return (
     <section className="relative mt-[30px] sm:mt-[40px] md:mt-[80px] ">
-      <img
-        className="absolute h-full hidden md:block -left-10 top-10"
-        src={macImg}
-        alt=""
-      />
+      <img className='absolute h-full hidden md:block -left-10 top-10' src={macImg} alt="" />
 
       <h2 className=" text-center mb-10  font-[600]  text-xl sm:text-2xl md:text-3xl ">
         Why Us ?
@@ -21,9 +17,8 @@ const WhyUs = () => {
           {/* Comment 1 */}
           <div className="opinion-1  flex gap-5 items-start ">
             <div className="yellow-card relative w-full p-5 text-white text-base sm:text-lg md:text-2xl  font-[500]  bg-[#ff5b00]  rounded-[38px_0px_38px_0px] ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores voluptate minima ab reiciendis voluptates excepturi?
-              Distinctio voluptas alias suscipit quaerat.
+              Why Choose ALO Computers?
+We provide the latest, high-performance computers and laptops at affordable prices. Our team ensures quality service, genuine products, and customer satisfaction with every purchase.
             </div>
             <div className="admin-circle flex flex-col items-center gap-2">
               <div className="  w-14 h-14 flex items-center justify-center  text-2xl md:text-3xl rounded-[50%]  border-2 border-[#000] ">
@@ -37,13 +32,12 @@ const WhyUs = () => {
           <div className="opinion-2  flex gap-5 items-start ">
             <div className="admin-circle w-28 flex flex-col items-center gap-2">
               <div className=" overflow-hidden  w-14 h-14 flex items-center justify-center  text-2xl md:text-3xl rounded-[50%]  border-2 border-[#000] ">
-                <img className="w-full h-full\" src={comentator1} alt="" />
+                <img className="w-full h-full" src="https://adebiportal.kz/storage/tmp/resize/authors/350_0_50a67d52f5941e1494fdb768a2777c13.jpeg" alt="" />
               </div>
-              <h5 className="font-[500] w-full text-base ">John Doe</h5>
+              <h5 className="font-[500] w-full text-base ">Stive Jobs</h5>
             </div>
             <div className="flex justify-end items-end flex-col green-card relative w-full p-5 text-white text-base sm:text-lg md:text-2xl  font-[500] bg-[#203350]  rounded-[0px_38px_0px_68px] ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores voluptate minima ab reiciendis
+             I recently bought my laptop from ALO Computers and the experience was amazing. The staff guided me to the best choice, and the delivery was super fast. Highly recommend!
               <div className="rate-star flex items-center gap-2">
                 <Rate className="flex" disabled defaultValue={4} />
                 (10)
@@ -55,13 +49,12 @@ const WhyUs = () => {
           <div className="opinion-3  flex gap-5 items-start ">
             <div className="admin-circle w-28 flex flex-col items-center gap-2">
               <div className=" overflow-hidden  w-14 h-14 flex items-center justify-center  text-2xl md:text-3xl rounded-[50%]  border-2 border-[#000] ">
-                <img className="w-full h-full" src={comentator2} alt="" />
+                <img className="w-full h-full" src="https://imageio.forbes.com/specials-images/imageserve/62d700cd6094d2c180f269b9/0x0.jpg?format=jpg&crop=959,959,x0,y0,safe&height=416&width=416&fit=bounds" alt="" />
               </div>
-              <h5 className="font-[500] w-full text-base ">Jack Crash</h5>
+              <h5 className="font-[500] w-full text-base ">Ilon Musk</h5>
             </div>
             <div className="flex justify-end items-end flex-col green-card relative w-full p-5 text-white text-base sm:text-lg md:text-2xl  font-[500]  bg-[#203350] rounded-[0px_38px_0px_68px] ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos modi
-              pariatur fuga non laboriosam laborum cumque eaque itaque vero eum!
+             ALO Computers offers top-notch devices with great after-sales support. My MacBook runs perfectly, and their customer service answered all my questions. I’m really satisfied!
               <div className="rate-star flex items-center gap-2">
                 <Rate className="flex" disabled defaultValue={4} />
                 (10)

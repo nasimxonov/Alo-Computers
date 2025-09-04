@@ -3,25 +3,24 @@ import { CiSearch } from "react-icons/ci";
 import { VscSettings } from "react-icons/vsc";
 import {
   IoLogoInstagram,
-  IoLogoLinkedin,
-  IoLogoTwitter,
+
 } from "react-icons/io5";
 
 import showacseMainImg from "../../images/home-imges/showacase-main-img.png";
+import { FaPhone, FaTelegram } from "react-icons/fa6";
 
 const Showcase = () => {
+
   return (
     <section className="showcase bg-[#8080803b]">
       <div className="mc pt-8 sm:pt-10 md:pt-14 flex flex-col md:flex-row items-center justify-between ">
         <div className="showcase-left w-[100%] md:w-[47%] flex flex-col gap-8 md:ga-12 lg:gap-18">
           <div className="showcase-left-top flex flex-col gap-3 sm:gap-4 md:gap-5">
             <h1 className="font-[700] text-4xl sm:text-5xl md:text-6xl">
-              <span className="  text-[#ff5b00]  ">Meat , Eat & Enjoy</span> the
-              true taste
+              <span className="  text-[#ff5b00]  ">Discover, Shop & Enjoy</span> the latest technology
             </h1>
             <h4 className="text-base sm:text-lg">
-              Lorem ipsum dolor sit amet consectetur. Maecenas nunc amet
-              sollicitudin odio purus dictumst mauris enim{" "}
+            Upgrade your world with powerful computers, sleek laptops, and innovative devices designed to fit your lifestyle.
             </h4>
           </div>
           <div className="showcase-left-bottom flex items-center md:items-start flex-col gap-3 sm:gap-6 md:gap-8 lg:gap-10">
@@ -45,14 +44,14 @@ const Showcase = () => {
             </form>
 
             <div className="showcase-links flex items-center gap-3 text-xl md:text-2xl lg:text-3xl text-[gray]">
-              <a target="_blank" href="">
+              <a target="_blank" href="https://www.instagram.com/alocomputers.uz/">
                 <IoLogoInstagram className=" hover:text-[#f46308]" />
               </a>
-              <a target="_blank" href="">
-                <IoLogoLinkedin className=" hover:text-[#4a4ae2]" />
+              <a  href="tel:+998975950595">
+                <FaPhone className=" hover:text-[#4a4ae2]" />
               </a>
-              <a target="_blank" href="">
-                <IoLogoTwitter className=" hover:text-[#4c6aff]" />
+              <a target="_blank" href="https://t.me/alocomputers">
+                <FaTelegram className=" hover:text-[#4c6aff]" />
               </a>
             </div>
           </div>

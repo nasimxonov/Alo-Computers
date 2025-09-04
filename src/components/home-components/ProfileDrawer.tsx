@@ -1,9 +1,10 @@
 import React from "react";
-import { Button, Drawer, Form, Input } from "antd";
+import { Button, Drawer, Form, Input, Spin } from "antd";
 import { useAuthStore, type UserDataType } from "../../zustand/authStore";
 import { useModalStore } from "../../zustand/modalstore";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { IoLogOutOutline } from "react-icons/io5";
+import { useUserUpdateMutation } from "../../hooks/useQueryHandler/useQueryActions/useQueryActions";
 
 const ProfileDrawerComponent: React.FC = () => {
   const isOpen = useModalStore((state) => state.profileModal);
@@ -12,12 +13,22 @@ const ProfileDrawerComponent: React.FC = () => {
   );
 
   const user = useAuthStore((state) => state.user) as UserDataType;
+
   const signOut = useAuthStore((state) => state.signOut);
-  const updateUser = (e: UserDataType) => {
-    console.log(e);
+  const { mutate :userUpdateMutation , isPending } = useUserUpdateMutation({
+    url: "/user/update",
+    method: "PUT",
+    mutationKey: "user-update",
+    messageSucces: "Your data successfully updated !",
+    messageError: "Your data unsuccessfully updated !",
+    headers:{ "Authorization":`Bearer ${ localStorage.getItem("token") }`}
+  });
+  const updateUser = (e: UserDataType) => {    
+   userUpdateMutation(e)
   };
   const signOutUser = () => {
     signOut();
+    localStorage.removeItem("token");
     localStorage.removeItem("user");
     toggleProfileDrawer();
   };
@@ -85,16 +96,17 @@ const ProfileDrawerComponent: React.FC = () => {
               addonBefore={<span className="!text-[#ff5b00]">+998</span>}
               suffix=""
               type="number"
-              defaultValue={user?.phoneNumber.slice(4) || ""}
+              defaultValue={user?.phoneNumber || ""}
             />
           </Form.Item>
 
           <Button
+            disabled={isPending}
             htmlType="submit"
-            className="h-12 text-xl    font-[500] active:!bg-[#ad3d00] bg-[#ff5b00] hover:!bg-[#ff5b00]"
+            className="h-12 text-xl  flex items-center justify-center gap-2   font-[500] active:!bg-[#ad3d00] bg-[#ff5b00] hover:!bg-[#ff5b00]"
             type="primary"
           >
-            {"Update"}
+               Update { isPending ? <Spin/> :""} 
           </Button>
         </Form>
 
